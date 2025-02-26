@@ -1,0 +1,250 @@
+/* General Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body, #root {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .dashboard {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    background-color: #000000;
+    color: white;
+    width: 220px;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+    height: 100vh;
+  }
+  
+  .sidebar.closed {
+    width: 60px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    display: flex;
+    align-items: left;
+    gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 8px; /* Adjust the value as needed */
+  }
+  
+  .sidebar li:hover {
+    background-color: #ff6229;
+  }
+  
+  .logout {
+    margin-top: 50px;
+    color: #e74c3c;
+  }
+  
+  /* Menu Button */
+  .menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
+    color: #333; /* Set dark text color */
+    font-weight: bold;
+    
+  }
+  
+   
+  
+  /* Cards */
+  .card-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .card {
+    background: white;
+    padding: 20px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color: #333; /* Set dark text color */
+    font-weight: bold;
+  }
+  
+
+  .link {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .link:hover {
+    background-color: #ff6229;
+  }
+  
+   /*start for cehck sub menu */
+/* Parent List Item */
+.reports {
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px;
+  transition: background 0.3s ease-in-out;
+}
+
+.reports:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+/* Updated Submenu Styling */
+.sub-menu {
+  position: absolute;
+  left: 0;  /* Align to left (under Reports) */
+  top: 100%; /* Show below the Reports list */
+  background: #2a2a3d;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);  /* Start slightly above */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  width: 180px; /* Adjust width if needed */
+}
+
+/* Show submenu on hover */
+.reports:hover .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); /* Move to position */
+}
+
+/* Submenu Items */
+.sub-menu li {
+  padding: 8px 12px;
+  transition: background 0.3s;
+  border-radius: 5px;
+  white-space: nowrap; /* Prevents text wrapping */
+}
+
+.sub-menu li:hover {
+  background: #3b3b50;
+}
+
+/* Submenu Links */
+.sub-menu .link {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.sub-menu .link:hover {
+  color: #f4a261;
+}
+
+   
+   
+   
+   /*end*/
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222269;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Adjust the value as needed */
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #2a2a3a;
+    padding: 8px 15px;
+    border-radius: 10px;
+  }
+  
+  .user-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-email {
+    font-weight: bold;
+    color: #f4b400;
+  }
+  
+  .user-branch {
+    color: #34a853;
+    font-style: italic;
+  }
+  
+  .profile-btn {
+    background: #4285f4;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .profile-btn:hover {
+    background: #3367d6;
+  }
+
+
+  .logout-btn {
+    background-color: #e2002d; /* Red color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+    transition: background 0.3s ease-in-out;
+}
+
+.logout-btn:hover {
+    background-color: #de7773; /* Darker red on hover */
+}

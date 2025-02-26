@@ -1,0 +1,164 @@
+.machine-container {
+    width: 100%;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .dropdown-container {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.report-heading {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+
+
+/* Hover and Focus Effects */
+
+
+
+.search-container input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.download-btn {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background: #219150;
+}
+  
+  .table-container {
+    max-height: 400px; /* Set a max height for the table */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #ddd;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    position: relative;
+  }
+  
+  thead {
+    background-color: #007bff; /* Change to your preferred color */
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  th {
+    background-color: #007bff; /* Ensures header background is visible */
+    color: white;
+    position: sticky;
+    top: 0;
+  }
+  .filter-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Adjust spacing */
+    margin-bottom: 15px;
+  }
+  
+  .search-container input {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    background-color: white; /* Ensures white background */
+    color: #333;
+  }
+    
+
+
+  /*css for search panel Start*/ 
+  
+  .search-panel {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 15px;
+    margin-bottom: 20px;
+    background: #a7ccf1;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 15px rgba(204, 179, 179, 0.1);
+    flex-wrap: wrap; /* Prevents overflow on smaller screens */
+  }
+  
+  /* Ensure each label + input is in a row */
+  .search-panel .field-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 200px; /* Set a fixed width to keep everything aligned */
+  }
+  
+  /* Label Styling */
+  .search-panel .field-container label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 4px; /* Adds spacing between label and input */
+  }
+  
+  /* Input & Select Box Styling */
+  .search-panel .field-container select,
+  .search-panel .field-container input {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+    color: rgb(28, 0, 61);
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    height: 38px; /* Keep all inputs the same height */
+  }
+  
+  /* Download PDF Button */
+  .search-panel .download-btn {
+    background-color: red;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    height: 40px; /* Matches input height */
+    margin-left: auto; /* Pushes it to the right */
+  }
+  
+  .search-panel .download-btn:hover {
+    background-color: green;
+  }
+  
+
+  /*end*/
+
+

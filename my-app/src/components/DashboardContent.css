@@ -1,0 +1,308 @@
+/* Dashboard Layout */
+/* Dashboard Container - Keep Left Section Fixed */
+.dashboard-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  align-items: flex-start; /* Align widgets at the top */
+}
+
+/* Left Section - Fixed Width */
+.left-section {
+  width: 60%; /* Adjust as needed */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Force 3 widgets per row */
+  gap: 15px;
+  flex-shrink: 0; /* Prevent resizing */
+}
+
+/* Right Section - Takes Remaining Space */
+.right-section {
+  flex-grow: 1;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 300px; /* Set a minimum width to avoid shrinking too much */
+}
+
+/* Dashboard Widgets */
+.dashboard-widget {
+  background: linear-gradient(135deg, #069f7b, #e4e9eb);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Push content to top & bottom */
+  align-items: center;
+  color: white;
+}
+
+.dashboard-widget:hover {
+  transform: translateY(-5px);
+}
+
+.dashboard-widget h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.dashboard-widget p {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+
+ 
+@keyframes grow {
+  from {
+    height: 40px;
+  }
+  to {
+    height: 100px;
+  }
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 50%;
+  max-height: 80vh;
+  overflow-y: auto;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.modal-subtitle {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.category-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 15px;
+  color: #444;
+}
+
+/* Category Grid */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.category-card {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease-in-out;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.category-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.category-count {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+ 
+
+/* Close Button */
+.close-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.close-btn:hover {
+  background: #d93636;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.see-more-container {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+}
+
+.see-more-btn {
+  background: linear-gradient(135deg, #007BFF, #00D4FF);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 100px;
+  margin-top: auto; /* Push button to the bottom */
+}
+
+.see-more-btn:hover {
+  background: linear-gradient(135deg, #0056b3, #00aaff);
+  box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.4);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Search Bar */
+.search-bar {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #007BFF;
+  border-radius: 25px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 3px 8px rgba(0, 123, 255, 0.2);
+}
+
+.search-bar:focus {
+  border-color: #0056b3;
+  box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.4);
+}
+
+/* Machine List */
+.machine-list {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+/* Machine Card */
+.machine-card {
+  background: linear-gradient(135deg, #318ef1, #e4e9eb);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* Machine Card Hover Effect */
+.machine-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Title */
+.machine-card h4 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: rgba(239, 96, 0, 0.69);
+}
+
+/* Machine Details Layout */
+.machine-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Each Column */
+.machine-column {
+  flex: 1;
+}
+
+/* Text Formatting */
+.machine-card p {
+  font-size: 14px;
+  color: black;
+  margin: 5px 0;
+}
+
+.no-data {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff4d4d;
+}
+
+.machine-column p::before {
+  content: "•";  /* Bullet point */
+  color: #FFD700; /* Golden color */
+  font-weight: bold;
+  display: inline-block;
+  width: 12px;
+  margin-right: 8px;
+}
+
+
+
+

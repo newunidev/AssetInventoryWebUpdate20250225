@@ -1,0 +1,100 @@
+.inventory-container {
+    padding: 20px;
+  }
+  
+  .search-panel {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 15px rgba(204, 179, 179, 0.1);
+  }
+  
+  .search-panel select,
+  .search-panel input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .search-panel button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .search-panel button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Table Styling */
+  .inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+  }
+  
+  .inventory-table th, .inventory-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .inventory-table th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .inventory-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  .search-button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .search-button:hover {
+    background-color: #0056b3;
+  }
+
+  .table-container {
+    max-height: 400px; /* Adjust height as needed */
+    overflow-y: auto;
+    border: 1px solid #ccc;
+  }
+  
+  .inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .inventory-table thead {
+    position: sticky;
+    top: 0;
+    background-color: #fff; /* Ensures headers are visible */
+    z-index: 100;
+  }
+  
+  .inventory-table th, .inventory-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .available-row {
+    background-color: green !important;
+    color: white;
+  }
