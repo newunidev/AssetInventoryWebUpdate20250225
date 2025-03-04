@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { FaBars, FaChevronDown } from "react-icons/fa";
 import { Link ,useNavigate} from "react-router-dom";
-import { FiLogOut } from "react-icons/fi";
+import { FiLogOut} from "react-icons/fi";
+import { FaTachometerAlt, FaCogs, FaQrcode } from "react-icons/fa";
+import { MdAssessment } from "react-icons/md";
+
 
 import "./Dashboard.css"; // Import the CSS file
 
@@ -45,16 +48,22 @@ const Dashboard = ({ children }) => {
           <FaBars />
         </button> */}
         <ul>
-          <li>
-            <Link to="/dashboardcontent" className="link">Dashboard</Link>
+        <li>
+            <Link to="/dashboardcontent" className="link">
+              <FaTachometerAlt className="icon" /> Dashboard
+            </Link>
           </li>
           <li>
-            <Link to="/machine" className="link">Machine</Link>
+            <Link to="/machine" className="link">
+              <FaCogs className="icon" /> Machine
+            </Link>
           </li>
           <li>
-            <Link to="/scans" className="link">Scan Options</Link>
+            <Link to="/scans" className="link">
+              <FaQrcode className="icon" /> Scan Options
+            </Link>
           </li>
-          <li className="reports" onMouseEnter={() => setIsReportsOpen(true)} onMouseLeave={() => setIsReportsOpen(false)}>
+          <li className="reports" onMouseEnter={() => setIsReportsOpen(true)} onMouseLeave={() => setIsReportsOpen(false)}><MdAssessment className="icon" />
             Reports <FaChevronDown className={isReportsOpen ? "rotate" : ""} />
             {isReportsOpen && (
               <ul className="sub-menu">
@@ -76,6 +85,11 @@ const Dashboard = ({ children }) => {
           </button>
           </li>
         </ul>
+        {/* Footer Section */}
+        <div className="sidebar-footer">
+          <p>© {new Date().getFullYear()} Developed by Dinindu Perera</p>
+          <p>Version 1.0.0</p>
+        </div>
       </div>
 
       {/* Main Content */}

@@ -70,10 +70,24 @@ export const getTotalItemsCount = async()=>{
     }
 }
 
+export const getItemCountLastScannedLocation = async(item_code)=>{
+    try{
+        const response = await apiClient.get(`itemcountscanbyserailno?item_code=${item_code}`);
+        console.log('Total Item Last Location CountScan  Response:',response.data);
+        return response.data;
+
+    }catch(error){
+        console.error('Error fetching Item Last Location CountSca :', error.message);
+        throw error;
+    }
+}
+
+
 export default {
     getItemsByBranchCategory,
     getItemScans,
     getItemByItemCode,
     getTotalItemsbyBranch,
-    getTotalItemsCount
+    getTotalItemsCount,
+    getItemCountLastScannedLocation
 };

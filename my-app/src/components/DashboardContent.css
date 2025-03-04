@@ -28,7 +28,7 @@
 
 /* Dashboard Widgets */
 .dashboard-widget {
-  background: linear-gradient(135deg, #069f7b, #e4e9eb);
+  background: linear-gradient(135deg, #222269, #0495ce);
   padding: 20px;
   border-radius: 10px;
   text-align: center;
@@ -50,12 +50,12 @@
 .dashboard-widget h3 {
   font-size: 18px;
   font-weight: bold;
-  color: #333;
+  color: #ffffff;
 }
 
 .dashboard-widget p {
   font-size: 14px;
-  color: #555;
+  color: #f6e4e4;
   margin-top: 5px;
 }
 
@@ -265,7 +265,7 @@
   font-size: 25px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: rgba(239, 96, 0, 0.69);
+  color: rgba(18, 19, 61, 0.69);
 }
 
 /* Machine Details Layout */
@@ -303,6 +303,44 @@
   margin-right: 8px;
 }
 
+.stat-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #004aad; /* A strong blue to grab attention */
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+   
+}
 
 
 
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column; /* Stack sections vertically */
+    gap: 10px; /* Reduce gap between sections */
+  }
+
+  .left-section {
+    width: 100%; /* Make it full width */
+    grid-template-columns: repeat(2, 1fr); /* 2 widgets per row */
+  }
+
+  .right-section {
+    width: 100%; /* Make it full width */
+    min-width: auto; /* Remove the min-width restriction */
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-section {
+    grid-template-columns: repeat(1, 1fr); /* 1 widget per row on very small screens */
+  }
+
+  .dashboard-widget {
+    min-height: 120px; /* Reduce widget height */
+    padding: 15px;
+  }
+}

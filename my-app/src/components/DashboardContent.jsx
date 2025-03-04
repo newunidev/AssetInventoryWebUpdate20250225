@@ -81,8 +81,8 @@ const DashboardContent = () => {
       <div className="left-section">
         {factoryData.map((factory, index) => (
           <div key={index} className="dashboard-widget">
-            <h3>{factory.name}</h3>
-            <p>Items: {factory.count}</p>
+            <h3>FACTORY :{factory.name}</h3>
+            <p>TOTAL MACHINES: {factory.count}</p>
 
             {/* "See More" Button */}
             <button 
@@ -97,7 +97,8 @@ const DashboardContent = () => {
 
       {/* Right Section: Search & Machine List */}
       <div className="right-section">
-        <h2 className="stat-title">Machine Details</h2>
+      <h2 className="stat-title">🔍 Efficiently Track and Verify Your Machines</h2>
+
 
         {/* Search Bar */}
         <input 

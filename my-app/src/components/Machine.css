@@ -73,6 +73,9 @@
     font-size: 14px;
   }
   
+  .table-container tr.repairing {
+    background-color: pink !important;
+  }
   th {
     background-color: #007bff; /* Ensures header background is visible */
     color: white;
@@ -157,8 +160,177 @@
   .search-panel .download-btn:hover {
     background-color: green;
   }
+  /* Download PDF Button */
+  .search-panel .checkmachine-btn {
+    background-color: blue;
+    color: white;
+     
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    height: 40px; /* Matches input height */
+    margin-left: auto; /* Pushes it to the right */
+  }
+  
+  .search-panel .checkmachine-btn:hover {
+    background-color:lawngreen;
+  }
   
 
+
+/* 🔹 Background Overlay with Blur & Fade Effect */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Darker overlay */
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+  z-index: 9999;
+}
+.popup-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333; /* Ensure it is visible */
+  text-align: center;
+}
+/* 🔹 Popup Box */
+.popup-content {
+  background: linear-gradient(135deg, #ffffff, #f7f7f7);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2), -10px -10px 30px rgba(255, 255, 255, 0.7); 
+  text-align: center;
+  min-width: 400px;  /* Increased size */
+  transform: scale(0.9);
+  animation: popupFadeIn 0.3s ease-in-out forwards;
+  position: relative;
+  z-index: 10000;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+/* 🔹 Close Button (Top-Right Corner) */
+/* 🔹 Smaller Close Button */
+/* 🔹 Close Button (Top-Right Corner of Popup) */
+.closed-btn {
+  display: flex;
+  background: none;
+  border: none;
+  font-size: 16px; /* Reduced size */
+  font-weight: bold;
+  cursor: pointer;
+  color: #ff3b3b;
+  position: absolute;
+  top: 15px;  /* Adjusted to align properly */
+  right: 15px; /* Adjusted for proper spacing */
+  transition: all 0.2s ease-in-out;
+  z-index: 10001; /* Ensure it stays on top */
+}
+
+ 
+/* 🔹 Search Container - Align Button & Input */
+.search-container {
+  display: flex;
+  padding-top: 10px;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* 🔹 Search Button - Modern Gradient */
+.search-btn {
+  background: linear-gradient(135deg, #3498db, #6dd5fa);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.search-btn:hover {
+  background: linear-gradient(135deg, #2980b9, #3498db);
+  transform: scale(1.1);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔹 Search Input Field */
+.search-input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  outline: none;
+  text-align: center;
+  background: #f3f3f3;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.search-input:focus {
+  background: white;
+  box-shadow: 0px 0px 10px rgba(52, 152, 219, 0.4);
+}
+
+/* 🔹 Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes popupFadeIn {
+  from { transform: scale(0.8); }
+  to { transform: scale(1); }
+}
+
+/* 🔹 Item Details Section */
+.item-details {
+  margin-top: 15px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  width: 100%;
+}
+
+.item-details h4 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.item-details p {
+  font-size: 14px;
+  color: #555;
+}
+
+  
+/* 🔹 Loading & Error Message */
+.loading {
+  color: #3498db;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+ 
   /*end*/
 
 
